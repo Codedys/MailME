@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <form action="/" method="post">
-        <p><label for="text">Write your letter:</label></p>
-        <textarea id="text" name="text" rows="5" cols="60"></textarea>
-        <br>
-        <input type="submit" value="Submit">
-      </form>
+      <p><label for="text">Write your letter:</label></p>
+      <textarea id="text" name="text" rows="5" cols="60"></textarea>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
 
-      {% if letter %}
-      <h2>Your Submitted Text:</h2>
-      <p>{{ letter }}</p>
-  {% endif %}
-    
-</body>
+    {% if letter %}
+    <h2>Your Submitted Text:</h2>
+    <p>{{ letter }}</p>
+    {% endif %}
+    <h2>All Submitted Letters:</h2>
+    <ul>
+        {% for letter in letters %}
+            <li>{{ letter.content }}</li>
+        {% endfor %}
+    </ul>
+  </body>
 </html>
