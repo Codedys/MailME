@@ -1,0 +1,14 @@
+# Virtual environment
+.venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code setting
+.vscode/
+
+# Environment variables
+.env
+
